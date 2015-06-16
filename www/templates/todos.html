@@ -1,0 +1,20 @@
+<ion-view view-title="Chats" >
+  <ion-content ng-controller="UITodoController">
+    <ion-list>
+      <ion-item ng-repeat="task in todos">
+        {{task.description}}
+        <ion-option-button class="button-assertive" ng-click="remove(task)" >
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    <div class="item item-divider">Add Task</div>
+        <label class="item item-input">
+            <input type="text" placeholder="description" ng-model="description">
+        </label>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="createEvent()">Submit</button>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>
